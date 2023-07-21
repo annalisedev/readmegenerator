@@ -1,4 +1,4 @@
-# 09 Node.js Challenge: Professional README Generator
+# Professional README Generator
 
 ## Description
 
@@ -22,7 +22,7 @@ Find a video demonstrating a walkthrough of the application here: https://drive.
 A screenshot of the test README can be found in assets:
 ![ScreenshotofApplication](./assets/sampleREADMEscreenshot.png)
 
-A gif of the walkthrough can be found in assets:
+A gif of the walkthrough can be found in assets: <br>
 ![README Generator Demo](./assets/Professional%20README%20Generator.gif)
 
 ## Support
