@@ -1,8 +1,8 @@
 # 09 Node.js Challenge: Professional README Generator
 
-## Your Task
+## Description
 
-When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project. 
+When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions. This weeks challenge required the creation of a command-line application to automatically generate a README.md file with all the appropriate information. This will allow the developer to spend more time on their application.
 
 You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
 
@@ -17,13 +17,9 @@ node index.js
 Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality. Revisit the Screencastify Tutorial in the prework as a refresher on how to record video from your computer. You’ll need to submit a link to the video _and_ add it to the README of your project.
 
 
-## User Story
+## Video Walkthrough
 
-```md
-AS A developer
-I WANT a README generator
-SO THAT I can quickly create a professional README for a new project
-```
+
 
 ## Acceptance Criteria
 

@@ -1,17 +1,13 @@
 # test
-    
-  
-  ![badge](https://img.shields.io/badge/license-MIT License-blue)
-    
+
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
   ## Table-of-Contents
 
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  
   * [License](#license)
-    
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
@@ -32,15 +28,7 @@
   
   ## [License](#table-of-contents)
  
-  
-    ## [License](#table-of-contents)
-  
-    The application is covered under the following license:
-  
-    
-    [MIT License](https://choosealicense.com/licenses/MIT License)
-      
-      
+  Apache
 
   ## [Contributing](#table-of-contents)
   

@@ -43,7 +43,7 @@ const questions = [
     {
         type: 'list',
         message: 'Which license have you used for your project?',
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense', 'No License'],
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla', 'Apache', 'MIT'],
         name: 'license',
     },
     {
@@ -63,7 +63,7 @@ const questions = [
 
 const writeFile = fileContent => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./generated-README.md', fileContent, err => {
+        fs.writeFile('./sample-README.md', fileContent, err => {
             if (err) {
                 reject(err);
                 return;
@@ -93,12 +93,27 @@ function writetoFile(fileName, data) {
 //Function to store user inputs
 
 const init = () => {
-    return inquirer.prompt(questions).then(readmeData => {
+    return inquirer.prompt(questions)
+    .then(readmeData => {
         return readmeData;
     })
 }
 
+
+/*
 // Function to initialize app
+async function init() {
+    try {
+      const answers = await inquirer.prompt(questions);
+      answers.license = licenseBadge(answers.license);
+      let readMeData = generateMarkdown(answers);
+      await writeFileAsync("sample-README.md", readMeData);
+    } catch (err) {
+      throw err;
+    }
+  }
+*/
+
 init() 
 .then(readmeData => {
     console.log(readmeData);
@@ -114,6 +129,11 @@ init()
     console.log(err);
 })
 
-
+/*
 // Function call to initialize app
-//init();
+init();
+
+module.exports = {
+    questions: questions,
+};
+*/
