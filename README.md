@@ -13,14 +13,23 @@ node index.js
 ```
 A walkthrough video was created to demonstrate it in use.
 
-## Video Walkthrough
+The Github Repository can be found here: https://github.com/annalisedev/readmegenerator
 
+## Video and Screenshot
+
+Find a video demonstrating a walkthrough of the application here: https://drive.google.com/file/d/1K2KNVHf_AdMMxAk8Iu8H4niFfaEYX7Q0/view
+
+A screenshot of the test README can be found in assets:
+![ScreenshotofApplication](./assets/sampleREADMEscreenshot.png)
+
+A gif of the walkthrough can be found in assets:
+![README Generator Demo](./assets/Professional%20README%20Generator.gif)
 
 ## Support
 
 Some external sources that supported me to understand the task and write the code are linked below. I also used the weekly activities considerably as I solved these questions. 
 
-License Shields https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
-Code for rendering the License Badge https://stackoverflow.com/questions/67013842/trying-to-place-license-badge-within-readme-md-using-node-js-but-getting-error-a
-Support in creating the video submission https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide
+License Shields https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba <br>
+Code for rendering the License Badge https://stackoverflow.com/questions/67013842/trying-to-place-license-badge-within-readme-md-using-node-js-but-getting-error-a <br>
+Support in creating the video submission https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide <br>
 How to remove the node_modules after gitignore file was lost https://www.tutorialspoint.com/how-to-ignore-a-previously-committed-file-in-git-repository 

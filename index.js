@@ -60,7 +60,6 @@ const questions = [
 ];
 
 // Function to write README file
-
 const writeFile = fileContent => {
     return new Promise((resolve, reject) => {
         fs.writeFile('./sample-README.md', fileContent, err => {
@@ -77,42 +76,13 @@ const writeFile = fileContent => {
 };
 
 
-/*
-function writetoFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Success! Your README.md file has been created")
-    });
-}
-*/
-
-
-
 //Function to store user inputs
-
 const init = () => {
     return inquirer.prompt(questions)
     .then(readmeData => {
         return readmeData;
     })
 }
-
-
-/*
-// Function to initialize app
-async function init() {
-    try {
-      const answers = await inquirer.prompt(questions);
-      answers.license = licenseBadge(answers.license);
-      let readMeData = generateMarkdown(answers);
-      await writeFileAsync("sample-README.md", readMeData);
-    } catch (err) {
-      throw err;
-    }
-  }
-*/
 
 init() 
 .then(readmeData => {
@@ -129,11 +99,3 @@ init()
     console.log(err);
 })
 
-/*
-// Function call to initialize app
-init();
-
-module.exports = {
-    questions: questions,
-};
-*/
