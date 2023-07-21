@@ -1,13 +1,104 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
+const inquirer = require("inquirer");
+const fs = require("fs");
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
-const questions = [];
+// Array of questions for user input
+const questions = [
+    {
+        type: 'input',
+        message: 'What is the title of your project?',
+        name: 'title',  
+    },
+    {
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'githubusername',
+    },
+    {
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'Describe your project and the problem it will solve.',
+        name: 'description',
+    },
+    {
+        type: 'input',
+        message: 'Describe how you have built the application, including the technologies/tools you have used',
+        name: 'how',
+    },
+    {
+        type: 'input',
+        message: 'How does the user install your project?',
+        name: 'installation',
+    },
+    {
+        type: 'input',
+        message: 'Describe how your project will be used.',
+        name: 'usage',
+    },
+    {
+        type: 'list',
+        message: 'Which license have you used for your project?',
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense', 'No License'],
+        name: 'license',
+    },
+    {
+        type: 'input',
+        message: 'Describe your project and the problem it will solve.',
+        name: 'description',
+    },
+    {
+        type: 'input',
+        message: 'Please provide guidelines on how others can contribute to your project.',
+        name: 'contribution',
+    },
+    {
+        type: 'input',
+        message: 'Describe how the application can be tested',
+        name: 'testing',
+    },
+    
+];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Function to write README file
+function writetoFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("Success! Your README.md file has been created")
+    });
+}
 
-// TODO: Create a function to initialize app
-function init() {}
+
+
+//Function to store user inputs
+
+const init = () => {
+    return inquirer.prompt(questions).then(readmeData => {
+        return readmeData;
+    })
+}
+// Function to initialize app
+init() 
+.then(readmeData => {
+    console.log(readmeData);
+    return generateMarkdown(readmeData);
+})
+.then(pageMD => {
+    return writeFile(pageMD);
+})
+.then(writeFileResponse => {
+    console.log(writeFileResponse.message);
+})
+.catch(err => {
+    console.log(err);
+})
+
 
 // Function call to initialize app
-init();
+//init();
