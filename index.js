@@ -13,7 +13,7 @@ const questions = [
     {
         type: 'input',
         message: 'What is your GitHub username?',
-        name: 'githubusername',
+        name: 'githubUsername',
     },
     {
         type: 'input',
@@ -48,11 +48,6 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Describe your project and the problem it will solve.',
-        name: 'description',
-    },
-    {
-        type: 'input',
         message: 'Please provide guidelines on how others can contribute to your project.',
         name: 'contribution',
     },
@@ -65,6 +60,24 @@ const questions = [
 ];
 
 // Function to write README file
+
+const writeFile = fileContent => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./generated-README.md', fileContent, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: 'Success! Your README.md file has been created!'
+            });
+        });
+    });
+};
+
+
+/*
 function writetoFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
         if (err) {
@@ -73,6 +86,7 @@ function writetoFile(fileName, data) {
         console.log("Success! Your README.md file has been created")
     });
 }
+*/
 
 
 
@@ -83,6 +97,7 @@ const init = () => {
         return readmeData;
     })
 }
+
 // Function to initialize app
 init() 
 .then(readmeData => {
